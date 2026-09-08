@@ -67,11 +67,6 @@ fun Dashboard(modifier: Modifier = Modifier) {
             value = "0",
             description = "Nessun ordine in corso"
         )
-        DashboardCard(
-            title = "Attività recenti",
-            value = "Tutto aggiornato",
-            description = "Non ci sono attività da mostrare"
-        )
     }
 }
 
