@@ -13,6 +13,7 @@ data class Document (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
     val type: String,
+    val serial: String,
     val number: String,
 
     @OneToMany(mappedBy = "document", cascade = [CascadeType.ALL])
