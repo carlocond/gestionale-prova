@@ -15,6 +15,8 @@ data class DocumentLine (
     val id: Long = 0,
     val barcode: String,
     val name: String,
+    val pkg: Int,
+    val quantity: Int,
     val quantityRequested: Int,
     val quantityPicked: Int,
 

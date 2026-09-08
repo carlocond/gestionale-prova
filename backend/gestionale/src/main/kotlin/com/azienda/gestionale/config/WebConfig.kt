@@ -7,6 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 @Configuration
 class WebConfig : WebMvcConfigurer {
     override fun addCorsMappings(registry: CorsRegistry) {
+        //Allows the app to communicate with APIs
         //Allows the app to comunicate with APIs
         registry.addMapping("/**")
             .allowedOrigins("*")
