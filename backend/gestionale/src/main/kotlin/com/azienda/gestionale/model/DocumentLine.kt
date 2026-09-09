@@ -24,7 +24,7 @@ data class DocumentLine (
     val pkg: Int = 0,
     val quantity: Int = 0,
     val quantityRequested: Int = 0,
-    val quantityPicked: Int = 0,
+    var quantityPicked: Int = 0,
 
     //Add db
     @ManyToOne(fetch = FetchType.LAZY)
