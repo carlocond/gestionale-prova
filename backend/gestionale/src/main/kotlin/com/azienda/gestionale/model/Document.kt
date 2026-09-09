@@ -33,7 +33,7 @@ enum class DocumentType(val refCode: String, val description: String) {
     ORDINE_FORNITORE("OF", "Ordine fornitore"),
     BOLLA_FORNITORE("BF", "Bolla fornitore"),
     FATTURA_FORNITORE("FF","Fattura fornitore"),
-    PREVENTIVO("PR", "Preventivo")
+    PREVENTIVO("PR", "Preventivo");
     //OC, BC, FC, OF, BF, FF, PR
 
     companion object {
