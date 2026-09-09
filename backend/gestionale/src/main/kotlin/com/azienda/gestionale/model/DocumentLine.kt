@@ -1,6 +1,5 @@
 package com.azienda.gestionale.model
 
-import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.FetchType
 import jakarta.persistence.GeneratedValue
@@ -18,9 +17,10 @@ data class DocumentLine (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    @Column(nullable = false)
-    val barcode: String,
-    val name: String,
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "product_id", nullable = false)
+    val product: Product,
+
     val pkg: Int = 0,
     val quantity: Int = 0,
     val quantityRequested: Int = 0,
