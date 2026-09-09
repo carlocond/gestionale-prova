@@ -57,7 +57,8 @@ open class PickingService(
                 type = DocumentType.BC,
                 serial = clientOrder.serial,
                 number = clientOrder.number,
-                //customer = clientOrder.customer
+                customer = clientOrder.customer,
+                supplier = clientOrder.supplier
             )
         }
         bc = documentRepository.save(bc)
