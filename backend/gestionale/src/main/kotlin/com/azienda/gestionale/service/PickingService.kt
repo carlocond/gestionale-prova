@@ -14,8 +14,10 @@ import com.azienda.gestionale.model.Product
 import com.azienda.gestionale.repository.AgentRepository
 import com.azienda.gestionale.repository.DocumentRepository
 import com.azienda.gestionale.repository.ProductRepository
+import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
+@Service
 open class PickingService(
     private val documentRepository: DocumentRepository,
     private val productRepository: ProductRepository,

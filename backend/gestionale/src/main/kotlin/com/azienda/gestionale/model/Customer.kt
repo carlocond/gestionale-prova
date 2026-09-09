@@ -14,4 +14,14 @@ data class Customer (
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
 
+    val code: String,
+    val name: String,
+    val vat: String,
+    val address: String,
+    val city: String,
+    val postalCode: String,
+    val province: String,
+    val telephone: String,
+    val email: String,
+
 )

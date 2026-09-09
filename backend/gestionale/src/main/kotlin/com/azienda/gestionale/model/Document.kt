@@ -13,8 +13,33 @@ import jakarta.persistence.ManyToOne
 import jakarta.persistence.OneToMany
 import jakarta.persistence.Table
 
-enum class DocumentType {
-    OC, BC, FC, OF, BF, FF, PR
+/*
+enum class TipoDocumento(val sigla: String, val descrizione: String) {
+    FATTURA("FT", "Fattura"),
+    NOTA_CREDITO("NC", "Nota di credito"),
+    DDT("DDT", "Documento di trasporto");
+
+    companion object {
+        private val perSigla = entries.associateBy { it.sigla }
+        fun daSigla(sigla: String): TipoDocumento? = perSigla[sigla]
+    }
+}
+ */
+
+enum class DocumentType(val refCode: String, val description: String) {
+    ORDINE_CLIENTE("OC", "Ordine cliente"),
+    BOLLA_CLIENTE("BC", "Bolla cliente"),
+    FATTURA_CLIENTE("FC", "Fattura cliente"),
+    ORDINE_FORNITORE("OF", "Ordine fornitore"),
+    BOLLA_FORNITORE("BF", "Bolla fornitore"),
+    FATTURA_FORNITORE("FF","Fattura fornitore"),
+    PREVENTIVO("PR", "Preventivo")
+    //OC, BC, FC, OF, BF, FF, PR
+
+    companion object {
+        private val byRefCode = entries.associateBy { it.refCode }
+        fun fromRefCode(refCode: String): DocumentType? = byRefCode[refCode]
+    }
 }
 @Entity
 @Table(name = "documents")
