@@ -4,6 +4,7 @@ import com.azienda.gestionale.dto.LoginRequestDTO
 import com.azienda.gestionale.dto.LoginResponseDTO
 import com.azienda.gestionale.exceptions.AgentNotFoundException
 import com.azienda.gestionale.repository.AgentRepository
+import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 
 @Service

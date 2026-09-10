@@ -17,5 +17,9 @@ data class Agent (
 
     @Column(nullable = false, unique = true)
     val username: String,
-    val description: String
+
+    @Column(nullable = false)
+    val password: String,
+
+    val description: String? = null
 )
